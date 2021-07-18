@@ -20,24 +20,49 @@
 
     <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
       <!-- drawer content -->
+      <MobileSideContent :mobileSideItems="sidePanelList" />
     </q-drawer>
   </div>
 </template>
 
 <script>
+import MobileSideContent from "./mobile_header_side_content/MobileSideContent.vue";
 import { ref } from "vue";
 
 export default {
+  components: {
+    MobileSideContent,
+  },
+  data() {
+    return {
+      sidePanelList: [
+        {
+          name: "store",
+          title: "فروشگاه",
+        },
+        {
+          name: "article",
+          title: "مقالات",
+        },
+        {
+          name: "info",
+          title: "درباره ما",
+        },
+        {
+          name: "connect_without_contact",
+          title: "ارتباط با ما",
+        },
+        {
+          name: "people",
+          title: "فروشندگان",
+        },
+      ],
+    };
+  },
   setup() {
-    const leftDrawerOpen = ref(false);
     const rightDrawerOpen = ref(false);
 
     return {
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
-
       rightDrawerOpen,
       toggleRightDrawer() {
         rightDrawerOpen.value = !rightDrawerOpen.value;
