@@ -2,7 +2,7 @@
   <div>
     <!-- desktop -->
     <div>
-      <TopHeader />
+      <TopHeader class="desktop-only" />
     </div>
     <!-- mobile -->
     <div class="mobile-only">
