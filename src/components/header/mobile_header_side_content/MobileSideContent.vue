@@ -34,8 +34,5 @@ import Search from "../../search/Search.vue";
 export default {
   components: { Search },
   props: ["mobileSideItems"],
-  monthed() {
-    console.log(this.mobileSideItems);
-  },
 };
 </script>
