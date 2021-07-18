@@ -2,7 +2,7 @@
   <div>
     <!-- desktop -->
     <div>
-      <TopHeader class="desktop-only" />
+      <DesktopHeader class="desktop-only" />
     </div>
     <!-- mobile -->
     <div class="mobile-only">
@@ -12,11 +12,11 @@
 </template>
 <script>
 import MobileHeader from "./MobileHeader.vue";
-import TopHeader from "./TopHeader.vue";
+import DesktopHeader from "./DesktopHeader.vue";
 export default {
   components: {
     MobileHeader,
-    TopHeader,
+    DesktopHeader,
   },
 };
 </script>
