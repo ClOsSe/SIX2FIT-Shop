@@ -14,22 +14,6 @@
         <div class="col-5">
           <Search :outline="true" />
         </div>
-        <!-- <q-toolbar class="col-4">
-          <q-input
-            bg-color="red-1"
-            rounded
-            outlined
-            label-color="deep-purple-10"
-            type="text"
-            class="q-pa-lg col-12"
-            label="search"
-            :dense="dense"
-          />
-        </q-toolbar>
-        <q-toolbar class="col-1">
-          <q-btn size="20px" flat round dense icon="search" />
-        </q-toolbar> -->
-
         <q-toolbar class="col-3" dir="ltr">
           <q-btn size="20px" flat round dense icon="login" />
         </q-toolbar>
@@ -46,14 +30,11 @@
 </template>
 <script>
 import Search from "../search/Search.vue";
-import { ref } from "vue";
 
 export default {
   components: { Search },
-  setup() {
-    return {
-      tab: ref("store"),
-    };
+  data() {
+    return {};
   },
 };
 </script>

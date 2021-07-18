@@ -1,10 +1,8 @@
 <template>
-  <q-layout dir="rtl" view="hHh LpR lFr">
+  <q-layout dir="rtl" view="hHh Lpr fff">
     <!-- header -->
     <Header />
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+    <router-view />
     <!-- footer -->
     <Footer />
   </q-layout>
