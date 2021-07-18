@@ -1,26 +1,36 @@
 <template>
-  <q-drawer
-    v-model="leftDrawerOpen"
-    overlay
-    side="right"
-    bordered
-    class="bg-grey-1"
-  >
-    <q-list>
-      <q-item-label header class="text-grey-8"
-        >{{ leftDrawerOpen }}
-      </q-item-label>
-    </q-list>
-  </q-drawer>
+  <div>
+    <q-header elevated class="bg-primary text-white" height-hint="98">
+      <q-toolbar>
+        <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
+      <!-- drawer content -->
+    </q-drawer>
+  </div>
 </template>
+
 <script>
+import { ref } from "vue";
+
 export default {
-  data() {
-    return { leftDrawerOpen: true };
-  },
-  props: ["drawer"],
-  monthed() {
-    this.leftDrawerOpen = this.drawer;
+  setup() {
+    const leftDrawerOpen = ref(false);
+    const rightDrawerOpen = ref(false);
+
+    return {
+      leftDrawerOpen,
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+
+      rightDrawerOpen,
+      toggleRightDrawer() {
+        rightDrawerOpen.value = !rightDrawerOpen.value;
+      },
+    };
   },
 };
 </script>

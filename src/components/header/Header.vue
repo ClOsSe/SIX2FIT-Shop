@@ -1,42 +1,22 @@
 <template>
   <div>
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-    <!-- side panel -->
+    <!-- desktop -->
     <div>
-      <MobileHeader :drawer="leftDrawerOpen" />
+      <TopHeader />
+    </div>
+    <!-- mobile -->
+    <div class="mobile-only">
+      <MobileHeader />
     </div>
   </div>
 </template>
 <script>
 import MobileHeader from "./MobileHeader.vue";
+import TopHeader from "./TopHeader.vue";
 export default {
   components: {
     MobileHeader,
+    TopHeader,
   },
-  data() {
-    return {
-      leftDrawerOpen: false,
-    };
-  },
-  //   methods: {
-  //     toggleLeftDrawer() {
-  //       this.leftDrawerOpen.drawer = !this.leftDrawerOpen.drawer;
-  //     },
-  //   },
 };
 </script>

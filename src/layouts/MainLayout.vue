@@ -1,5 +1,5 @@
 <template>
-  <q-layout dir="rtl" view="hHh Lpr lFf">
+  <q-layout dir="rtl" view="hHh LpR lFr">
     <!-- header -->
     <Header />
     <q-page-container>

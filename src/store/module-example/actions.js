@@ -1,2 +1,5 @@
-export function someAction (/* context */) {
+export function someAction (context) {
+    sidePanelDialog(context){
+        context.sidePanelDialog('sidePanelDialog')
+    }
 }
