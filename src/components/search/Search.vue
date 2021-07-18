@@ -2,7 +2,10 @@
   <div class="row">
     <div class="col-9">
       <q-input
-        label-color="deep-purple-1"
+        :bg-color="outline ? 'red-1' : ''"
+        :rounded="outline"
+        :outlined="outline"
+        :label-color="outline ? 'deep-purple-10' : 'red-1'"
         type="text"
         label="search"
         :dense="dense"
@@ -23,6 +26,7 @@
 </template>
 <script>
 export default {
+  props: ["outline"],
   data() {
     return {
       search: "",

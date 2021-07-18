@@ -2,11 +2,13 @@
   <div>
     <!-- desktop -->
     <div>
-      <DesktopHeader class="desktop-only" />
+      <DesktopHeader class="mobile-hide" />
+      <!-- <DesktopHeader class="desktop-only" /> -->
     </div>
     <!-- mobile -->
-    <div class="mobile-only">
-      <MobileHeader />
+    <div>
+      <MobileHeader class="desktop-hide" />
+      <!-- <MobileHeader class="mobile-only" /> -->
     </div>
   </div>
 </template>

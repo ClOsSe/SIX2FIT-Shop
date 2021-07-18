@@ -11,8 +11,10 @@
             <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
           </q-avatar>
         </q-toolbar>
-
-        <q-toolbar class="col-4">
+        <div class="col-5">
+          <Search :outline="true" />
+        </div>
+        <!-- <q-toolbar class="col-4">
           <q-input
             bg-color="red-1"
             rounded
@@ -26,7 +28,7 @@
         </q-toolbar>
         <q-toolbar class="col-1">
           <q-btn size="20px" flat round dense icon="search" />
-        </q-toolbar>
+        </q-toolbar> -->
 
         <q-toolbar class="col-3" dir="ltr">
           <q-btn size="20px" flat round dense icon="login" />
@@ -43,9 +45,11 @@
   </div>
 </template>
 <script>
+import Search from "../search/Search.vue";
 import { ref } from "vue";
 
 export default {
+  components: { Search },
   setup() {
     return {
       tab: ref("store"),
