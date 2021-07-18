@@ -2,21 +2,23 @@
   <div>
     <!-- desktop -->
     <div>
-      <TopHeader />
+      <DesktopHeader class="mobile-hide" />
+      <!-- <DesktopHeader class="desktop-only" /> -->
     </div>
     <!-- mobile -->
-    <div class="mobile-only">
-      <MobileHeader />
+    <div>
+      <MobileHeader class="desktop-hide" />
+      <!-- <MobileHeader class="mobile-only" /> -->
     </div>
   </div>
 </template>
 <script>
 import MobileHeader from "./MobileHeader.vue";
-import TopHeader from "./TopHeader.vue";
+import DesktopHeader from "./DesktopHeader.vue";
 export default {
   components: {
     MobileHeader,
-    TopHeader,
+    DesktopHeader,
   },
 };
 </script>

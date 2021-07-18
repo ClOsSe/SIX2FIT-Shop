@@ -1,28 +1,53 @@
 <template>
-  <div class="row q-col-gutter-lg">
-   <template v-for="item in 3" :key="item">
-        <div class="col-12 col-sm-4 col-md-4">
-      <q-card class="my-card text-center" flat bordered>
-        <q-icon name="home" />
-
-        <q-card-section class="items-stretch flex-center justify-between ">
-          <div class="text-overline text-orange-9">Overline</div>
-          <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
-          <div class="text-caption text-grey">
-            {{ title }}
-          </div>
-        </q-card-section>
-      </q-card>
-    </div>
-   </template>
+  <div class="row q-col-gutter-lg justify-center">
+    <template v-for="item in listdata" :key="item">
+      <!-- each card -->
+      <div class="col-12 col-md-3">
+        <q-card class="my-card text-center" flat>
+          <q-icon :name="item.icon" size="50px" />
+          <q-card-section class="items-stretch flex-center justify-between">
+            <div class="text-h5 q-mt-sm q-mb-xs">
+              <p>{{ item.title }}</p>
+            </div>
+            <div class="text-weight-bold">
+              <p>{{ item.description }}</p>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+      <!-- each card -->
+    </template>
   </div>
 </template>
 <script>
+const listdata = [
+  {
+    name: "howto",
+    icon: "local_shipping",
+    title: "title",
+    description:
+      "کاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدار",
+  },
+  {
+    name: "howto",
+    icon: "person_add",
+    title: "title",
+    description:
+      "کاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدار",
+  },
+  {
+    name: "howto",
+    icon: "switch_account",
+    title: "title",
+    description:
+      "کاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدارکاهش هزینه‌های جانبی فروش تا کمترین مقدار",
+  },
+];
 export default {
-    data(){
-        return{
-            title:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    }
-}
+  data() {
+    return {
+      listdata: listdata,
+    };
+  },
+};
 </script>
