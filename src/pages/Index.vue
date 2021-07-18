@@ -1,17 +1,22 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
+  <q-page class="flex ">
+    <div>
+      <!-- <Slider /> -->
+      <ThumbnailSlider />
+      <h1>این صفحه خانه می‌باشد.</h1>
+    </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+// import Slider from '../components/width_slider/MainSlider.vue'
+import ThumbnailSlider from '../components/thumbnail_slider/ThumbnailSlider.vue'
 
-export default defineComponent({
-  name: 'PageIndex'
-})
+export default {
+  name: "PageIndex",
+  components:{
+    // Slider,
+    ThumbnailSlider
+  }
+};
 </script>
