@@ -15,7 +15,20 @@
           <Search :outline="true" />
         </div>
         <q-toolbar class="col-3" dir="ltr">
-          <q-btn size="20px" flat round dense icon="login" />
+          <div class="q-pa-md q-gutter-sm">
+            <q-btn size="20px" flat round dense icon="login" @click="show()" />
+            <q-dialog
+              class="full-heigh full-width"
+              ref="dialog"
+              @hide="onDialogHide"
+            >
+              <q-card class="q-dialog-plugin card q-ma-none q-pa-none">
+                <q-card-section align="right " class="q-ma-none q-pa-none">
+                  <Login />
+                </q-card-section>
+              </q-card>
+            </q-dialog>
+          </div>
         </q-toolbar>
       </div>
       <q-tabs v-model="tab">
@@ -29,13 +42,42 @@
   </div>
 </template>
 <script>
+import { useQuasar } from "quasar";
 import Search from "../search/Search.vue";
+import Login from "../login/Login.vue";
 
 export default {
-  components: { Search },
-  data() {
-    return {};
+  components: { Search, Login },
+  emits: [
+    // REQUIRED
+    "ok",
+    // "hide",
+  ],
+
+  methods: {
+    // following method is REQUIRED
+    // (don't change its name --> "show")
+    show() {
+      this.$refs.dialog.show();
+    },
+
+    // following method is REQUIRED
+    // (don't change its name --> "hide")
+    hide() {
+      this.$refs.dialog.hide();
+    },
+
+    // onDialogHide() {
+    // required to be emitted
+    // when QDialog emits "hide" event
+    // this.$emit("hide");
+    // },
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card {
+  width: 900px;
+  max-width: none;
+}
+</style>

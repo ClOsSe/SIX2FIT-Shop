@@ -22,3 +22,11 @@ $positive  : #21BA45;
 $negative  : #C10015;
 $info      : #31CCEC;
 $warning   : #F2C037;
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v29.1.0/dist/font-face.css');
+
+// Set the default font-family
+$typography-font-family : 'vazir', vazir !default;
+
+// Fix font-weight values to match the imported font family weights
+$text-weights: (thin: 300, light: 400, regular: 600, medium: 700, bold: 800, bolder: 800) !default;
+$button-font-weight: 600 // or 400 if you prefer thinner;

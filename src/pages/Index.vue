@@ -1,8 +1,9 @@
 <template>
   <q-page class="flex q-page col-12">
-    <div class="fit">
+    <div class="fit  ">
       <Slider />
-      <!-- List Vendors -->
+  <div class="costum_width  q-ma-auto">
+        <!-- List Vendors -->
 
       <div class="vendors q-ma-lg">
         <div class="row flex align-center">
@@ -54,6 +55,7 @@
       <!-- <SingleBanner /> -->
 
       <CardWithPictureAndDescription />
+  </div>
     </div>
   </q-page>
 </template>
@@ -149,4 +151,9 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.costum_width{
+  max-width: 1500px;
+  margin: auto;
+}
+</style>
