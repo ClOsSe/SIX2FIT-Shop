@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-md">
-    <q-carousel swipeable animated v-model="slide" thumbnails infinite autoplay>
+  <div class=" fit">
+    <q-carousel swipeable animated v-model="slide"  infinite autoplay>
       <template v-for="(item, index) in sliderItem" :key="index">
         <q-carousel-slide
           :name="index"

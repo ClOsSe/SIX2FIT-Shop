@@ -4,7 +4,7 @@
       <!-- each card -->
       <div class="col-12 col-md-3">
         <q-card class="my-card text-center" flat>
-          <q-icon :name="item.icon" size="50px" />
+          <q-icon :name="item.icon" color="grey-9" size="50px" />
           <q-card-section class="items-stretch flex-center justify-between">
             <div class="text-h5 q-mt-sm q-mb-xs">
               <p>{{ item.title }}</p>
