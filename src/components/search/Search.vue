@@ -12,15 +12,7 @@
       />
     </div>
     <div class="col-2 q-ma-sm">
-      <q-btn
-        color="red-1"
-        class="q-mt-sm"
-        size="20px"
-        flat
-        round
-        dense
-        icon="search"
-      />
+      <q-btn color="red-1" size="20px" flat round dense icon="search" />
     </div>
   </div>
 </template>
