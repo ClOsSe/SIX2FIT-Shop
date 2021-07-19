@@ -17,9 +17,13 @@
         <q-toolbar class="col-3" dir="ltr">
           <div class="q-pa-md q-gutter-sm">
             <q-btn size="20px" flat round dense icon="login" @click="show()" />
-            <q-dialog ref="dialog" @hide="onDialogHide">
-              <q-card class="q-dialog-plugin">
-                <q-card-section align="right">
+            <q-dialog
+              class="full-heigh full-width"
+              ref="dialog"
+              @hide="onDialogHide"
+            >
+              <q-card class="q-dialog-plugin card q-ma-none q-pa-none">
+                <q-card-section align="right " class="q-ma-none q-pa-none">
                   <Login />
                 </q-card-section>
               </q-card>
@@ -71,4 +75,9 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card {
+  width: 900px;
+  max-width: none;
+}
+</style>

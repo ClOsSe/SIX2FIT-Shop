@@ -9,6 +9,7 @@
         type="text"
         label="search"
         :dense="dense"
+        id="qinput"
       />
     </div>
     <div class="col-2 q-ma-sm">

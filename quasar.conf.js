@@ -52,7 +52,7 @@ module.exports = configure(function (ctx) {
       // Applies only if "transpile" is set to true.
       // transpileDependencies: [],
 
-      rtl: true, // https://v2.quasar.dev/options/rtl-support
+      rtl: false, // https://v2.quasar.dev/options/rtl-support
       // preloadChunks: true,
       // showProgress: false,
       // gzip: true,
