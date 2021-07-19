@@ -1,27 +1,114 @@
 <template>
-  <div class="q-pa-md">
-    <q-carousel swipeable animated v-model="slide" thumbnails infinite autoplay>
-      <template v-for="(item, index) in sliderItem" :key="index">
-        <q-carousel-slide
-          :name="index"
-          v-bind:img-src="sliderItem[index].src"
-        />
+  <div>
+    <swiper
+      :slides-per-view="6"
+      :space-between="40"
+      :breakpoints="swiperOptions.breakpoints"
+      class="q-ma-lg"
+    >
+      <template v-for="(item, index) in items" :key="index">
+        <swiper-slide class="" clickable>
+          <q-card class="my-card">
+            <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
+
+            <q-card-section>
+              <div class="row no-wrap items-center">
+                <div class="col text-subtitle1 ellipsis">{{ item.title }}</div>
+                <div
+                  class="
+                    col-auto
+                    text-grey text-caption
+                    q-pt-md
+                    row
+                    no-wrap
+                    items-center
+                  "
+                ></div>
+              </div>
+
+              <q-rating v-model="item.stars" :max="5" size="26px" />
+            </q-card-section>
+
+            <q-card-section v-if="item.vendors == true" class="q-pt-none">
+              <div class="text-subtitle1">{{ item.desciption }}</div>
+            </q-card-section>
+
+            <q-card-section v-if="item.vendors != true" class="q-pt-none">
+              <div class="text-subtitle1">{{ item.price }}</div>
+              <div class="text-caption text-grey">
+                <span class="text-red-14">{{ item.offPrice }}</span>
+              </div>
+            </q-card-section>
+
+            <q-separator />
+
+            <q-card-actions v-if="item.vendors != true">
+              <q-btn flat round icon="event" />
+              <q-space></q-space>
+              <q-btn flat color="blue-1" class="bg-red-10">
+                افزودن به سبد خرید
+              </q-btn>
+            </q-card-actions>
+          </q-card>
+        </swiper-slide>
       </template>
-    </q-carousel>
+
+      ...
+    </swiper>
   </div>
 </template>
 <script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/swiper.scss";
+
 export default {
+  props: ["items"],
   data() {
     return {
-      slide: 1,
-      sliderItem: [
-        { src: "https://cdn.quasar.dev/img/mountains.jpg" },
-        { src: "https://cdn.quasar.dev/img/parallax1.jpg" },
-        { src: "https://cdn.quasar.dev/img/parallax2.jpg" },
-        { src: "https://cdn.quasar.dev/img/quasar.jpg" },
-      ],
+      stars: "",
+      swiperOptions: {
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          599: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+
+          771: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1023: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+          1439: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+          1919: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+          },
+        },
+      },
     };
   },
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  methods: {},
 };
 </script>
+<style scoped>
+.swiper-container {
+  overflow: inherit;
+}
+</style>
