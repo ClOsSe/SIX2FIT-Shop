@@ -1,6 +1,6 @@
 <template>
   <div class="register-card row col-12">
-    <div class="col-6 q-pa-lg">
+    <div class="col-12 col-md-6 col-lg-6 q-pa-lg">
       <q-input
         class="q-pt-lg"
         outlined
@@ -41,8 +41,19 @@
         bordered
         style="width: 100%"
       />
+      <q-uploader
+        class="q-mt-lg"
+        url="http://localhost:4444/upload"
+        label="آپلود مدارک مورد"
+        square
+        color="teal"
+        flat
+        multiple
+        bordered
+        style="width: 100%"
+      />
     </div>
-    <div class="col-6 q-pa-lg">
+    <div class="col-12 col-md-6 col-lg-6 q-pa-lg">
       <q-input
         class="q-pt-lg"
         outlined
@@ -64,31 +75,24 @@
 
       <div class="q-pa-md">
         <div class="q-gutter-md">
+          <p class="q-mt-lg">تاریخ تولد</p>
           <q-date
             dir="ltr"
-            v-model="birthDay"
+            v-model="person.birthDay"
             color="secondary"
             text-color="black"
+            style="width: 100%"
           />
         </div>
       </div>
-
-      <q-uploader
-        class="q-mr-lg q-mt-lg"
-        url="http://localhost:4444/upload"
-        label="آپلود فایل لوگو"
-        square
-        color="teal"
-        flat
-        multiple
-        bordered
-        style="width: 100%"
-      />
+    </div>
+    <div class="offset-10"></div>
+    <div class="col-12 col-md-2 col-lg-2 q-pa-lg">
+      <q-btn style="width: 100%" color="secondary" size="20px" label="ادامه" />
     </div>
   </div>
 </template>
 <script>
-import { ref } from "vue";
 export default {
   data() {
     return {
@@ -101,26 +105,22 @@ export default {
         lastName: "",
         phoneNumber: "",
         emailAddress: "",
+        birthDay: "",
       },
-      birthOfDate: "",
     };
   },
-  monthed() {
-    const year = new Date().getUTCFullYear;
-    const month = new Date().getUTCFullMonth;
-    const day = new Date().getUTCFullDay;
-    this.birthOfDate = year + month + day;
-    console.log(this.birthOfDate);
+  mounted() {
+    this.getDate();
   },
   methods: {
-    showBirthDay() {
-      console.log(this.birthOfDate);
+    getDate() {
+      let day = new Date().getDate();
+      day.toLocaleString().length != 2 ? (day = "0" + day) : "";
+      let Month = new Date().getMonth() + 1;
+      Month.toLocaleString().length != 2 ? (Month = "0" + Month) : "";
+      let year = new Date().getFullYear();
+      this.person.birthDay = day + "/" + Month + "/" + year;
     },
-  },
-  setup() {
-    return {
-      birthDay: ref(),
-    };
   },
 };
 </script>
