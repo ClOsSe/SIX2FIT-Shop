@@ -6,14 +6,21 @@
       elevated
     >
       <div class="row">
+        <!-- logo -->
         <q-toolbar class="col-4">
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
+          <router-link :to="{ name: 'Home' }">
+            <q-avatar>
+              <img
+                src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg"
+              />
+            </q-avatar>
+          </router-link>
         </q-toolbar>
+        <!-- search -->
         <div class="col-5">
           <Search :outline="true" />
         </div>
+        <!-- login -->
         <q-toolbar class="col-3" dir="ltr">
           <div class="q-pa-md q-gutter-sm">
             <q-btn size="20px" flat round dense icon="login" @click="show()" />
@@ -29,8 +36,23 @@
               </q-card>
             </q-dialog>
           </div>
+          <div>
+            <router-link :to="{ name: 'RegisterVendors' }">
+              <q-btn
+                size="20px"
+                flat
+                round
+                dense
+                color="red-1"
+                style=""
+                icon="person_add"
+                @click="register()"
+              />
+            </router-link>
+          </div>
         </q-toolbar>
       </div>
+      <!-- menu -->
       <q-tabs v-model="tab">
         <q-tab name="store" label="فروشگاه" />
         <q-tab name="blogs" label="مقالات" />
@@ -42,7 +64,6 @@
   </div>
 </template>
 <script>
-import { useQuasar } from "quasar";
 import Search from "../search/Search.vue";
 import Login from "../login/Login.vue";
 
