@@ -11,9 +11,13 @@
           <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
         </q-toolbar>
         <q-toolbar dir="ltr" class="col">
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
+          <router-link :to="{ name: 'Home' }">
+            <q-avatar>
+              <img
+                src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg"
+              />
+            </q-avatar>
+          </router-link>
         </q-toolbar>
       </div>
     </q-header>

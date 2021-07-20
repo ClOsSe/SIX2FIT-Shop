@@ -64,7 +64,6 @@
   </div>
 </template>
 <script>
-import { useQuasar } from "quasar";
 import Search from "../search/Search.vue";
 import Login from "../login/Login.vue";
 
