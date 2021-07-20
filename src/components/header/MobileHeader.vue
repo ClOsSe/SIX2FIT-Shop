@@ -60,6 +60,10 @@ export default {
           name: "people",
           title: "فروشندگان",
         },
+        {
+          name: "mark_email_read",
+          title: "تیکت ها",
+        },
       ],
     };
   },

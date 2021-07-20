@@ -59,6 +59,12 @@
         <q-tab name="aboutus" label="درباره ما" />
         <q-tab name="contactus" label="تماس با ما" />
         <q-tab name="vendors" label="فروشندگان" />
+        <router-link
+          style="text-decoration: none; color: white"
+          :to="{ name: 'Ticket' }"
+        >
+          <q-tab name="tickets" label="تیکت‌ها" />
+        </router-link>
       </q-tabs>
     </q-header>
   </div>

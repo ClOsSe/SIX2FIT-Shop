@@ -1,19 +1,16 @@
 <template>
-  <div class="row">
-    <div class="response">
-      <Response :tickets="ticketList" />
-    </div>
-    <div class="title col-12 text-center">
-      <h3>ارسال تیکت جدید</h3>
-    </div>
-    <div class="form q-ma-lg">
-      <TicketForm />
-    </div>
+  <div>
+    <p>
+      در این صفحه با توجه به ای دی ارسالی تمام تیکت ها و زیر تیکت های همان ای دی
+      دریافت می شوند
+    </p>
+    <Response :tickets="ticketList" />
+    <TicketForm />
   </div>
 </template>
 <script>
-import Response from "./show_response/Response.vue";
-import TicketForm from "./contact_form/TicketForm.vue";
+import Response from "../../components/ticket/show_response/Response.vue";
+import TicketForm from "../../components/ticket/contact_form/TicketForm.vue";
 export default {
   components: { Response, TicketForm },
   data() {
@@ -45,8 +42,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.form {
-  border: 1px solid $secondary;
-}
-</style>

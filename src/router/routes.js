@@ -59,6 +59,11 @@ const routes = [
         component: () => import("pages/register/RegisterVendors.vue"),
         name: "RegisterVendors",
       },
+      {
+        path: "send-ticket/:id",
+        component: () => import("pages/send_single_ticket/SendTicket.vue"),
+        name: "SendTicketWithTicketId",
+      },
     ],
   },
 
