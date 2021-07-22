@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="q-ma-sm">
     <div class="row">
       <div class="col-4">
         <ImageGallery class="ImageGallery" :thumbnails="thumbnails" />
@@ -18,14 +18,11 @@
         </q-col>
         <q-space></q-space>
         <q-col>
-          <router-link class="text-subtitle1 q-ma-sm" to="/"
-            >مشاهده همه</router-link
-          >
+          <router-link class="text-subtitle1 q-ma-sm" to="/">مشاهده همه</router-link>
         </q-col>
       </div>
       <Related :items="listBestsellers" />
       <Tab />
-      
     </div>
   </div>
 </template>
