@@ -8,7 +8,8 @@
     <div class="q-pa-sm q-pt-lg q-pl-lg col-8">
       <div class="cart-body">
         <UserAddress />
-        <ItemsInformation />
+        <!-- <ItemsInformation /> -->
+        <CartItems />
       </div>
     </div>
     <div class="q-ma-lg col-12">
@@ -18,11 +19,18 @@
 </template>
 <script>
 import UserAddress from "./address/UserAddress.vue";
-import ItemsInformation from "./card_cart_information/ItemsInformation.vue";
+// import ItemsInformation from "./card_cart_information/ItemsInformation.vue";
+import CartItems from "./table_item/CartItems.vue";
 import ThumbnailSlider from "../thumbnail_slider/ThumbnailSlider.vue";
 import SideCart from "./side_cart/SideCart.vue";
 export default {
-  components: { UserAddress, ItemsInformation, ThumbnailSlider, SideCart },
+  components: {
+    UserAddress,
+    // ItemsInformation,
+    CartItems,
+    ThumbnailSlider,
+    SideCart,
+  },
   data() {
     return {
       Bestseller: [

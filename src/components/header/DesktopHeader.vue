@@ -1,11 +1,11 @@
 <template>
-  <div class="q-pa-md">
-    <q-header
+  <div class="">
+    <div
       style="background: #4527a0 !important"
       bg-color="deep-purple-10"
       elevated
     >
-      <div class="row">
+      <div class="row q-pa-sm">
         <!-- logo -->
         <q-toolbar class="col-4">
           <router-link :to="{ name: 'Home' }">
@@ -79,7 +79,7 @@
           <q-tab name="tickets" label="تیکت‌ها" />
         </router-link>
       </q-tabs>
-    </q-header>
+    </div>
   </div>
 </template>
 <script>

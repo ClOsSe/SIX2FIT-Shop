@@ -1,6 +1,6 @@
 <template>
   <div class=" fit">
-    <q-carousel swipeable animated v-model="slide"  infinite autoplay>
+    <q-carousel swipeable animated v-model="slide" :thumbnails="thumbnails"  infinite autoplay>
       <template v-for="(item, index) in sliderItem" :key="index">
         <q-carousel-slide
           :name="index"
@@ -15,6 +15,7 @@ export default {
   data() {
     return {
       slide: 1,
+      
       sliderItem: [
         { src: "https://cdn.quasar.dev/img/mountains.jpg" },
         { src: "https://cdn.quasar.dev/img/parallax1.jpg" },
@@ -23,5 +24,6 @@ export default {
       ],
     };
   },
+  props: ["thumbnails"],
 };
 </script>

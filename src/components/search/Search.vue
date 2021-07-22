@@ -7,7 +7,7 @@
         :outlined="outline"
         :label-color="outline ? 'deep-purple-10' : 'red-1'"
         type="text"
-        label="search"
+        placeholder="جستجو"
         :dense="dense"
         id="qinput"
       />

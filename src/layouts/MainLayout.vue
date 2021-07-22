@@ -1,11 +1,17 @@
 <template>
   <q-layout dir="rtl" view="hHh Lpr fff">
     <!-- header -->
-    <Header />
-    <router-view />
-    <!-- footer -->
-    <Footer />
-  </q-layout>
+<q-header>
+      <Header />
+
+</q-header>
+<q-page-container>
+      <router-view />
+    </q-page-container>    <!-- footer -->
+<q-footer>
+      <Footer />
+</q-footer> 
+ </q-layout>
 </template>
 
 <script>
@@ -21,3 +27,8 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+  .q-page-container{
+    padding-right: 0 !important;
+  }
+</style>
