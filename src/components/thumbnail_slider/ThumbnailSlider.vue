@@ -26,29 +26,27 @@
                 ></div>
               </div>
 
-              <q-rating v-model="item.stars" :max="5" size="26px" />
+              <q-rating
+                v-if="item.vendors == true"
+                v-model="item.stars"
+                :max="5"
+                size="20px"
+              />
             </q-card-section>
 
             <q-card-section v-if="item.vendors == true" class="q-pt-none">
               <div class="text-subtitle1">{{ item.desciption }}</div>
             </q-card-section>
 
-            <q-card-section v-if="item.vendors != true" class="q-pt-none">
+            <q-card-section
+              v-if="item.vendors != true"
+              class="q-pt-none text-left"
+            >
               <div class="text-subtitle1">{{ item.price }}</div>
               <div class="text-caption text-grey">
                 <span class="text-red-14">{{ item.offPrice }}</span>
               </div>
             </q-card-section>
-
-            <q-separator />
-
-            <q-card-actions v-if="item.vendors != true">
-              <q-btn flat round icon="event" />
-              <q-space></q-space>
-              <q-btn flat color="blue-1" class="bg-red-10">
-                افزودن به سبد خرید
-              </q-btn>
-            </q-card-actions>
           </q-card>
         </swiper-slide>
       </template>
@@ -104,7 +102,9 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  methods: {},
+  methods: {
+    
+  },
 };
 </script>
 <style scoped>

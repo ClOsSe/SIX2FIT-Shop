@@ -23,7 +23,7 @@
         <!-- login -->
         <q-toolbar class="col-3" dir="ltr">
           <div class="q-pa-md q-gutter-sm">
-            <q-btn size="20px" flat round dense icon="login" @click="show()" />
+            <q-btn size="18px" flat round dense icon="login" @click="show()" />
             <q-dialog
               class="full-heigh full-width"
               ref="dialog"
@@ -37,16 +37,29 @@
             </q-dialog>
           </div>
           <div>
-            <router-link :to="{ name: 'RegisterVendors' }">
+            <router-link
+              style="text-decoration: none"
+              :to="{ name: 'RegisterVendors' }"
+            >
               <q-btn
-                size="20px"
+                size="18px"
                 flat
                 round
                 dense
                 color="red-1"
                 style=""
                 icon="person_add"
-                @click="register()"
+              />
+            </router-link>
+            <router-link style="text-decoration: none" :to="{ name: 'Cart' }">
+              <q-btn
+                size="18px"
+                flat
+                round
+                dense
+                color="red-1"
+                style=""
+                icon="shopping_cart"
               />
             </router-link>
           </div>
