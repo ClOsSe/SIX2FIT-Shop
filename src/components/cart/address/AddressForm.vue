@@ -71,7 +71,7 @@
         :disable="inputDisabled"
       />
     </div>
-    <div dir="ltr" class="q-pr-xs q-pl-xs col-12">
+    <div v-if="!inputDisabled" dir="ltr" class="q-pr-xs q-pl-xs col-12">
       <q-btn
         class="q-pa-md q-ma-xs"
         size="18px"

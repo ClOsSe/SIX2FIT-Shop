@@ -14,13 +14,14 @@
           <p>{{ cart.totalPrice }} تومان</p>
         </div>
         <div class="submit col-12">
-          <q-btn
-            class="text-center fit"
-            size="18px"
-            align="center"
-            color="secondary"
-            label="تکمیل خرید"
-          />
+          <router-link style="text-decoration: none" :to="{ name: 'Payment' }">
+            <q-btn
+              class="text-center fit"
+              size="18px"
+              align="center"
+              color="secondary"
+              label="تکمیل خرید"
+          /></router-link>
         </div>
       </div>
     </div>
