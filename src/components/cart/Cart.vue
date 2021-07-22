@@ -7,7 +7,7 @@
     </div>
     <div class="q-pa-sm q-pt-lg q-pl-lg col-8">
       <div class="cart-body">
-        <UserAddress />
+        <UserAddress :userAddress="noneEditAbleAddress" />
         <!-- <ItemsInformation /> -->
         <CartItems />
       </div>
@@ -62,6 +62,18 @@ export default {
       Side: {
         totalPrice: 750,
         points: 750,
+      },
+      noneEditAbleAddress: {
+        state: "state",
+        part: "part",
+        address: "address",
+        city: "city",
+        homeNumber: "homeNumber",
+        buildingNumber: "buildingNumber",
+        userAddress: "userAddress",
+        username: "username",
+        postalCode: "postalCode",
+        editAble: false,
       },
     };
   },
