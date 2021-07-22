@@ -73,7 +73,7 @@ export default {
         userAddress: "userAddress",
         username: "username",
         postalCode: "postalCode",
-        editAble: false,
+        editAble: true,
       },
     };
   },

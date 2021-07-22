@@ -16,7 +16,11 @@
             "
           >
             <div class="row">
-              <h5 class="q-ma-none">ورود {{ role }}</h5>
+              <h5 class="q-ma-none">
+                ورود
+                <span v-if="role == 'user'"> کاربر </span>
+                <span v-if="role == 'vendor'"> فروشنده </span>
+              </h5>
             </div>
             <div class="row">
               <q-input
@@ -34,7 +38,7 @@
                 <q-radio
                   color="secondary"
                   v-model="role"
-                  val="کاربر"
+                  val="user"
                   label="کاربر"
                   size="50px"
                   @click="validation()"
@@ -44,7 +48,7 @@
                 <q-radio
                   color="secondary"
                   v-model="role"
-                  val="فروشنده"
+                  val="vendor"
                   label="فروشنده"
                   size="50px"
                   @click="validation()"
@@ -78,12 +82,14 @@ export default {
   },
   methods: {
     validation() {
-      console.log("test");
       this.role == "" ? (this.disable = true) : (this.disable = false);
     },
     login() {
-      console.log(this.userNumber);
-      console.log(this.role);
+      if (this.role === "user") {
+        this.$router.push({ name: "registerUser" });
+      } else {
+        this.$router.push({ name: "RegisterVendors" });
+      }
     },
   },
 };
