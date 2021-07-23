@@ -80,6 +80,7 @@ export default {
           title: "پنیر سنتی گوسفندی سایگول مقدار 700 گرم",
           stars: 4,
           vendors: false,
+          src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
         },
         {
           price: 35000,
@@ -87,6 +88,8 @@ export default {
           title: "پنیر سنتی گوسفندی سایگول مقدار 700 گرم",
           stars: 4,
           vendors: false,
+                    src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
         },
         {
           price: 35000,
@@ -94,6 +97,8 @@ export default {
           title: "پنیر سنتی گوسفندی سایگول مقدار 700 گرم",
           stars: 4,
           vendors: false,
+                    src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
         },
       ],
       listOffProduct: [
@@ -103,6 +108,8 @@ export default {
           title: "پنیر سنتی گوسفندی سایگول مقدار 700 گرم",
           stars: 4,
           vendors: false,
+                    src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
 
         },
       ],
@@ -115,6 +122,8 @@ export default {
           stars: 4,
           vendors: true,
           desciption: "alkdjssdkljh",
+                              src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
         },
         {
           price: 35000,
@@ -123,6 +132,8 @@ export default {
           stars: 4,
           vendors: true,
           desciption: "alkdjssdkljh",
+                              src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
         },
         {
           price: 35000,
@@ -131,6 +142,8 @@ export default {
           stars: 4,
           vendors: true,
           desciption: "alkdjssdkljh",
+                              src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
         },
         {
           price: 35000,
@@ -139,6 +152,8 @@ export default {
           stars: 4,
           vendors: true,
           desciption: "alkdjssdkljh",
+                              src:"https://dkstatics-public.digikala.com/digikala-products/89e7f2abac447a018242a954f03f8a6926344f8b_1594023235.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60"
+
         },
       ],
     };

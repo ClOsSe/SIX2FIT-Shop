@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-carousel": "^2.0.0-beta",
+    "@ocrv/vue-tailwind-pagination": "0.0.4",
     "@quasar/extras": "^1.0.0",
     "@vue/compiler-sfc": "^3.1.2",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "jw-vue-pagination": "^1.0.3",
     "quasar": "^2.0.0",
     "swiper": "^6.7.5",
     "vazir-font": "^29.1.0",

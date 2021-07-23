@@ -4,12 +4,14 @@
       :slides-per-view="6"
       :space-between="40"
       :breakpoints="swiperOptions.breakpoints"
-      class="q-ma-lg"
+      class="swiperCard"
     >
       <template v-for="(item, index) in items" :key="index">
-        <swiper-slide class="" clickable>
-          <q-card class="my-card">
-            <q-img src="https://cdn.quasar.dev/img/chicken-salad.jpg" />
+        <swiper-slide class=" q-pa-sm" clickable>
+          <q-card class="my-card q-pa-sm text-center" clickable>
+            
+              <q-img :src="item.src" class="fit imagethumbnail " />
+            
 
             <q-card-section>
               <div class="row no-wrap items-center">
@@ -107,8 +109,25 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 .swiper-container {
   overflow: inherit;
+}
+.my-card{
+  .imagethumbnail{
+    max-width: 140px !important;
+  }
+  box-shadow: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.my-card:hover{
+  box-shadow: 0px 0px 6px rgb(185, 182, 182);
+  transform: scale(1.01);
+}
+.swiperCard{
+  border-top: 1px solid rgb(185, 182, 182);
+  margin: 10px;
+  padding: 10px;
 }
 </style>

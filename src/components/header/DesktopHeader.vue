@@ -5,7 +5,7 @@
       bg-color="deep-purple-10"
       elevated
     >
-      <div class="row q-pa-sm">
+      <div class="row q-pa-sm flex-center">
         <!-- logo -->
         <q-toolbar class="col-4">
           <router-link :to="{ name: 'Home' }">
@@ -67,8 +67,20 @@
       </div>
       <!-- menu -->
       <q-tabs v-model="tab">
+        
+         <router-link
+          style="text-decoration: none; color: white"
+          :to="{ name: 'Store' }"
+        >
         <q-tab name="store" label="فروشگاه" />
+        </router-link>
+         <router-link
+          style="text-decoration: none; color: white"
+          :to="{ name: 'Article' }"
+        >
         <q-tab name="blogs" label="مقالات" />
+        </router-link>
+        
         <q-tab name="aboutus" label="درباره ما" />
         <q-tab name="contactus" label="تماس با ما" />
         <q-tab name="vendors" label="فروشندگان" />
